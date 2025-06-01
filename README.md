@@ -10,3 +10,14 @@ This project focuses on the implementation of a Bus Inversion (BI) Coding System
 2. Use a select line to switch between encoding and decoding modes.
 3. Design a synchronous system with clock-driven input and output.
 4. Provide a Verilog-based modular design suitable for FPGA/ASIC implementation.
+
+## Block Diagram
+<img src="docs/block_diagram.png" width="600"/>
+
+## Verilog modules
+| Sl No | Module Name | Description                                      |
+|:-----:|:------------|:------------------------------------------------|
+| 01    | top         | Main logic code                                  |
+| 02    | encoder     | Performs encoding operation at sender            |
+| 03    | decoder     | Performs decoding operation at receiver          |
+| 04    | top_tb      | Consists of testbench for Vivado simulation      |
