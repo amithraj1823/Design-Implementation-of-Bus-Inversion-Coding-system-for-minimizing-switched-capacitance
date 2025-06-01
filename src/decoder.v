@@ -1,32 +1,7 @@
-//`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 23.05.2025 15:28:39
-// Design Name: 
-// Module Name: circular_left_shift
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
-
-// File: circular_left_shift.v
-module circular_left_shift (
-    input  [7:0] in,
-    output [7:0] out
+module decoder (
+    input wire [7:0] data_in,
+    input wire invert,
+    output wire [7:0] data_out
 );
-
-assign out = {in[6:0], in[7]};  // Shift left, MSB goes to LSB
-
+    assign data_out = invert ? ~data_in : data_in;
 endmodule
-
