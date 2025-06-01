@@ -1,33 +1,25 @@
-//`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 21.05.2025 14:47:32
-// Design Name: 
-// Module Name: bitwise_xor
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
-
-// File: bitwise_xor.v
-module bitwise_xor (
-    input  [7:0] a,     // First 8-bit input
-    input  [7:0] b,     // Second 8-bit input
-    output [7:0] y      // Output: a ^ b
+module encoder (
+    input wire [7:0] data_in,
+    input wire [7:0] prev_data,
+    output reg [7:0] data_out,
+    output reg invert
 );
+    integer i;
+    reg [3:0] hamming_distance;
 
-assign y = a ^ b;      // Bitwise XOR operation
+    always @(*) begin
+        hamming_distance = 0;
+        for (i = 0; i < 8; i = i + 1) begin
+            if (data_in[i] != prev_data[i])
+                hamming_distance = hamming_distance + 1;
+        end
 
+        if (hamming_distance > 4) begin
+            data_out = ~data_in;
+            invert = 1;
+        end else begin
+            data_out = data_in;
+            invert = 0;
+        end
+    end
 endmodule
-
