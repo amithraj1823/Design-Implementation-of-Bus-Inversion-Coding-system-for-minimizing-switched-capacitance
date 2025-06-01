@@ -44,3 +44,10 @@ This project focuses on the implementation of a Bus Inversion (BI) Coding System
 <img src="sim/waveforms/top_tb_1.png" width="600"/>
 
 <img src="sim/waveforms/top_tb_2.png" width="600"/>
+
+## Hardware Implementation
+### Encryption                                     
+<img src="hardware/encryption.jpg" width="600"/>   
+
+### Decryption                                     
+<img src="hardware/decryption.jpg" width="600"/>   
