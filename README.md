@@ -8,7 +8,7 @@ This project focuses on the implementation of a Bus Inversion (BI) Coding System
 The system supports both encoding and decoding operations, controlled via a select line, and operates synchronously with a clock signal.
 
 🎯 Objectives
-1.Implement a bus encoding mechanism to reduce bit transitions.
-2.Use a select line to switch between encoding and decoding modes.
-3.Design a synchronous system with clock-driven input and output.
-4.Provide a Verilog-based modular design suitable for FPGA/ASIC implementation.
+1. Implement a bus encoding mechanism to reduce bit transitions.
+2. Use a select line to switch between encoding and decoding modes.
+3. Design a synchronous system with clock-driven input and output.
+4. Provide a Verilog-based modular design suitable for FPGA/ASIC implementation.
